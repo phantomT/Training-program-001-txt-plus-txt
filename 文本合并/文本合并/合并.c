@@ -110,7 +110,7 @@ void connect(void)
 	file_name_1 = get_name();
 	printf("Openning %s\n", file_name_1);                   //状态标识  
 
-	if ((fpa = fopen(file_name_1, "r")) == NULL)            // 打开输出文件并使fpa指向此文件  
+	if ((fpa = fopen(file_name_1, "rb")) == NULL)            // 打开输出文件并使fpa指向此文件  
 	{
 		printf("Open failure...\n");                        // 如果打开时出错，就输出"打不开"的信息    
 		exit(0);                                            // 终止程序  
@@ -121,14 +121,14 @@ void connect(void)
 	file_name_2 = get_name();
 	printf("Openning %s\n", file_name_2);                   //状态标识  
 
-	if ((fpb = fopen(file_name_2, "r")) == NULL)            // 打开输出文件并使fpb指向此文件  
+	if ((fpb = fopen(file_name_2, "rb")) == NULL)            // 打开输出文件并使fpb指向此文件  
 	{
 		printf("Open failure...\n");                        // 如果打开时出错，就输出"打不开"的信息    
 		exit(0);                                            // 终止程序  
 	}
 
 
-	if ((fpc = fopen("Output_file.txt", "w")) == NULL)      // 打开输出文件并使fpc指向此文件  
+	if ((fpc = fopen("Output_file.txt", "rwb")) == NULL)      // 打开输出文件并使fpc指向此文件  
 	{
 		printf("Open failure...\n");                        // 如果打开时出错，就输出"打不开"的信息    
 		exit(0);                                            // 终止程序  
